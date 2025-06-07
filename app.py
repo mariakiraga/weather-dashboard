@@ -57,4 +57,4 @@ def index():
     return render_template('index.html', weather=weather_data, current_city=city)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0') # host='0.0.0.0' pozwala na dostęp z zewnątrz
+    app.run(debug=True, host='0.0.0.0', port='19999') # host='0.0.0.0' pozwala na dostęp z zewnątrz
