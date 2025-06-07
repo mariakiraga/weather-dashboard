@@ -66,14 +66,23 @@ docker pull ghcr.io/mariakiraga/weather-dashboard:latest
 ### 2. Run the Docker Container
 
 ```bash
-docker run -d -p 19999:19999 --restart unless-stopped ghcr.io/mariakiraga/weather-dashboard:latest
+docker run -d --name=weather -p 19999:19999 --restart unless-stopped ghcr.io/mariakiraga/weather-dashboard:latest
 ```
 
 This command will:
 - `-d`: Run the container in detached mode (in the background).
+- `--name=weather`: Assign the name weather to your container, making it easier to manage.
 - `-p 19999:19999`: Map port `19999` of your host to port `19999` inside the container.
 - `--restart unless-stopped`: Configure the container to restart automatically unless it is explicitly stopped.
 After running the command, the application will be available at `http://localhost:19999`.
+
+## 3. Stop the Docker Container
+To stop and remove the running Docker container named `weather`:
+
+```bash
+docker stop weather
+docker rm weather
+```
 
 ---
 
