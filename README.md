@@ -25,8 +25,8 @@ Follow these steps to get your Weather Dashboard up and running.
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository_url>
-cd <repository_directory>
+git clone https://github.com/mariakiraga/weather-dashboard.git
+cd weather-dashboard
 ```
 
 ### 2. Create a `config.py` file
